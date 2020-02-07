@@ -19,6 +19,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { XyzPipe } from './xyz.pipe';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { DocGenComponent } from './doc-gen/doc-gen.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     Imgpipe,
     TemplateFormComponent,
     XyzPipe,
-    ReactiveformComponent
+    ReactiveformComponent,
+    DocGenComponent
   ],
   imports: [
     BrowserModule,
