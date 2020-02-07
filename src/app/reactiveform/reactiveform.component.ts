@@ -16,10 +16,10 @@ export class ReactiveformComponent implements OnInit {
   public userForm: FormGroup;
   public submitted: boolean = false;
   constructor(private fb: FormBuilder, private scriptService: ScriptService) { 
-    this.scriptService.load('pdfMake', 'vfsFonts');
   }
 
   ngOnInit() {
+    this.scriptService.load('pdfMake', 'vfsFonts');
     this.userForm = this.fb.group({
       'username': ['', [Validators.required, Validators.minLength(5), UserRegx.Username]],
       'password': ['', [Validators.required, UserRegx.Password]],
