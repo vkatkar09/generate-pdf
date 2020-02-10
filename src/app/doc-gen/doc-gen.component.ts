@@ -10,10 +10,11 @@ import { saveAs } from "file-saver";
 export class DocGenComponent implements OnInit {
 
   constructor() { }
-
+  public username;
   ngOnInit() {
   }
   create(){
+    console.log(this.username)
     const doc = new Document();
     doc.addSection({
       properties: {},
@@ -22,7 +23,7 @@ export class DocGenComponent implements OnInit {
               children: [
                   new TextRun("Hello World"),
                   new TextRun({
-                      text: "Foo Bar",
+                      text: this.username,
                       bold: true,
                   }),
                   new TextRun({
